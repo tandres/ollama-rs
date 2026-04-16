@@ -226,6 +226,7 @@ pub struct ChatMessageResponse {
     /// The log probabilities (only if `logprobs` is set to `true`)
     pub logprobs: Option<Vec<LogprobsData>>,
     pub done: bool,
+    pub done_reason: Option<String>,
     #[serde(flatten)]
     /// The final data of the completion. This is only present if the completion is done.
     pub final_data: Option<ChatMessageFinalResponseData>,
